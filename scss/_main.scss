@@ -113,11 +113,19 @@ Resume Section
 ul.skills, ul.awards {
 	list-style: none;
 	margin: 0;
-	column-count: 3;
+	column-count: 2;
+
+	@include breakpoint(medium) {
+		column-count: 3;
+	}
+
 }
 
 ul.awards {
-	column-count: 2;
+	column-count: 1;
+	@include breakpoint(medium) {
+		column-count: 2;
+	}
 }
 
 /****************
