@@ -1,0 +1,167 @@
+/**********
+Tyopography
+**********/
+
+h1.heading {
+	text-transform: uppercase;
+	color: $lt-teal;
+
+	small {
+		text-transform: lowercase;
+		font-family: 'Sacramento';
+		color: $white;
+	}
+}
+
+a, .button {
+	font-weight: bold;
+}
+
+/*************
+General Styles
+*************/
+
+section {
+	padding-top: rem-calc(50);
+	padding-bottom: rem-calc(50);
+	min-height: 100vh;
+	width: 100% !important;
+}
+
+/************
+Intro Section
+************/
+
+#intro {
+	background-color: $teal;
+
+	img{
+		max-width: 20%;
+		border-radius: 50%;
+		border: 2px solid $white;
+	}
+}
+
+header {
+	text-align: center;
+	color: $white;
+}
+
+nav {
+	margin: rem-calc(50) 0;
+}
+
+nav .menu {
+	width: 100%;
+
+	li {
+		float: left;
+		display: inline-block;
+		width: auto;
+		width: 25%;
+		text-align: center;
+	}
+
+	a {
+		color: $white;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+}
+
+/************
+Intro Section
+************/
+
+/*************
+Resume Section
+*************/
+
+#resume {
+	h1{
+		color: $header-color;
+	}
+	h2, h3 {
+		font-weight: bold;
+	}
+
+	h2 {
+		text-transform: uppercase;
+		position: relative;
+		margin-top: rem-calc(25);
+
+		span {
+			position: relative;
+			background-color: $body-background;
+			padding: rem-calc(10 10 10 0);
+			z-index: 1;
+		}
+
+		&:after {
+			position: absolute;
+			display: block;
+			content: '';
+			width: 100%;
+			height: 100%;
+			top: 0;
+			border-bottom: 1px solid $teal;
+			transform: translate(0, -50%)
+		}
+	}
+}
+
+ul.skills, ul.awards {
+	list-style: none;
+	margin: 0;
+	column-count: 3;
+}
+
+ul.awards {
+	column-count: 2;
+}
+
+/****************
+Portfolio Section
+****************/
+
+#portfolio {
+
+	h1.heading {
+		text-align: center;
+		margin-bottom: rem-calc(40);
+		color: $lt-teal;
+	}
+
+	background-color: $teal;
+
+	.project {
+		font-weight: normal;
+		color: $body-font-color;
+		background-color: $white;
+		display: block;
+		margin-bottom: rem-calc(30);
+		transition: transform 100ms ease-out;
+
+		h1 {
+			font-weight: bold;
+			font-size: rem-calc(24);
+			text-align: left;
+		}
+
+		&:hover {
+			box-shadow: 0px 2px 15px rgba($black, .25);
+			transform: translate(0, -5px);
+
+		}
+
+		img {
+			border-bottom: 1px solid $medium-gray;
+		}
+
+		.description{
+			padding: rem-calc(20);
+		}
+	}
+}
+
+

@@ -1,0 +1,114 @@
+html,
+body,
+.off-canvas-wrapper,
+.off-canvas-content,
+.off-canvas-wrapper-inner {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.off-canvas-wrapper {
+	background-color: $offcanvas-background;
+}
+
+.js-off-canvas-exit {
+	background-color: transparent;
+}
+
+#map {
+    height: calc(100% - 75px);
+    width: 100%;
+}
+
+.gm-style div {
+	// Make centering of map smoother
+	transition: transform 100ms ease-in-out;
+}
+
+.loading-graphic {
+	display: block;
+	background-color: $light-gray;
+	width: rem-calc(150);
+	height: rem-calc(150);
+}
+
+.off-canvas-nav {
+	
+	form {
+		
+		background-color: darken($indigo, 10%);
+
+		input {
+			margin: rem-calc(15) 0;
+			width: 100%;
+			padding: rem-calc(10);
+		}
+	}
+
+	li {
+		border-top: 1px solid darken($indigo, 5%);
+
+		&:last-child {
+			border-bottom: 1px solid darken($indigo, 5%);
+		}
+	}
+
+	a {
+		text-transform: uppercase;
+		color: $light-gray;
+		transition: all 300ms ease-in-out;
+
+		&:hover {
+			color: $avocado;
+		}
+
+		&.active {
+			background-color: $teal;
+			color: $indigo;
+		}
+	}
+}
+
+.attribution-link {
+	color: $indigo;
+	
+	&:hover{
+		color: $plum;
+	}
+
+}
+
+.title-bar {
+	height: rem-calc(75);
+	padding: 0 rem-calc(20);
+	
+	.title-bar-title {
+		font-size: 1.25rem;
+		margin: 0;
+		padding: 0;
+		line-height: rem-calc(75);
+	}
+
+	.place-label {
+		display: block;
+		line-height: rem-calc(75);
+		color: $avocado;
+	}
+}
+
+.place-name {
+	font-size: 1.25rem;
+}
+
+.no-results {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	color: darken($indigo, 20%);
+}
+
+.map-error {
+	text-align: center;
+	padding: rem-calc(20);
+}
